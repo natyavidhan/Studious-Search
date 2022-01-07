@@ -3,6 +3,8 @@ import json
 import requests
 from tkinter import messagebox
 from tkinter.messagebox import showinfo, showerror
+from urllib.request import urlopen
+import base64
 
 class App:
     def __init__(self, root):
@@ -50,6 +52,15 @@ class App:
             if item['type'] == 'text':
                 self.browser.create_text(item['x'], item['y'], text=item['text'], anchor=tk.NW,
                                         font=("Helvetica", int(item['size'])), fill=item['color'])
+            elif item['type'] == 'image':
+                item['src'] = "static/" + item['src']
+                item['src'] = "/" + item['src'] if self.url[-1] != "/" else item['src']
+                image_byt = urlopen(self.url + item["src"]).read()
+                image_b64 = base64.encodebytes(image_byt)
+                photo = tk.PhotoImage(data=image_b64)
+                self.root.image = photo
+                self.browser.create_image(item['x'], item['y'], image=photo, anchor=tk.NW)
+                
     def reloadWebsite(self):
         if self.url != "":
             try:

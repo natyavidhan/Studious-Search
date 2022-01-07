@@ -14,10 +14,15 @@
             "type": "text",
             "text": "This is the first ever website on studious search",
             "color": "#000000",
-            "size": "18",
-            "weight": "bold",
+            "size": "25",
             "x": 0,
             "y": 100
+        },
+        {
+            "type": "image",
+            "src": "server.png",
+            "x": 0,
+            "y": 200
         }
     ]
 }
