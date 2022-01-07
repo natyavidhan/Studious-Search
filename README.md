@@ -1,2 +1,2 @@
 # Studious-Search
-A Broswer, do not question
+A Browser, do not question

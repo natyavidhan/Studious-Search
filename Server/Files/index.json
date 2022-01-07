@@ -1,0 +1,14 @@
+{
+    "title": "Studious Search | Home",
+    "body": [
+        {
+            "type": "text",
+            "text": "",
+            "color": "#000000",
+            "size": "18",
+            "weight": "bold",
+            "x": 100,
+            "y": 100
+        }
+    ]
+}
