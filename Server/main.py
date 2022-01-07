@@ -2,16 +2,13 @@ from flask import Flask, request, jsonify, send_from_directory
 import json
 
 app = Flask(__name__)
-
 routes = json.load(open('routes.json'))
-print(routes)
 
 @app.route('/')
 def main():
     for route in routes.keys():
         if route == "":
             return send_from_directory('', f"Files/{routes[route]}.json")
-
 
 @app.route('/<route>')
 def routing(route):

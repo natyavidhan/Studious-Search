@@ -3,11 +3,20 @@
     "body": [
         {
             "type": "text",
-            "text": "",
+            "text": "hello world!",
             "color": "#000000",
             "size": "18",
             "weight": "bold",
-            "x": 100,
+            "x": 0,
+            "y": 0
+        },
+        {
+            "type": "text",
+            "text": "This is the first ever website on studious search",
+            "color": "#000000",
+            "size": "18",
+            "weight": "bold",
+            "x": 0,
             "y": 100
         }
     ]
